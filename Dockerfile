@@ -37,6 +37,9 @@ RUN apt-get -y install ssh openssh-server rsync
 # --- 3 Install a shell text editor
 RUN apt-get -y install nano vim-nox
 
+# --- 3 Install nmap
+RUN apt-get -y install nmap mc
+
 # --- 5 Update Your Debian Installation
 ADD ./etc/apt/sources.list /etc/apt/sources.list
 RUN apt-get -y update && apt-get -y upgrade
